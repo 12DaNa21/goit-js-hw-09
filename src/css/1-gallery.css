@@ -1,0 +1,19 @@
+.gallery {
+    max-width: 1440px;
+    padding: 0;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+  
+  .gallery-item {
+    width: calc((100% - 48px) / 3);
+    list-style-type: none;
+  }
+  
+  
+  .gallery-link {
+    cursor: pointer;
+  }
+  
