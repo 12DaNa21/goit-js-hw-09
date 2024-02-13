@@ -72,26 +72,27 @@ const images = [
    
 
   const gallery = document.querySelector('.gallery');
-  
-  
-  
-  function createImagesMarkup({ preview, original, description }) {
+
+function createImagesMarkup({ preview, original, description }) {
     return `<li class="gallery-item">
-    <a class="gallery-link" href="${original}">
-      <img class="gallery-image"
-        src="${preview}"
-        data-source="${original}"
-        alt="${description}"
-      />
-    </a>
-  </li>`;
-    }
-    const imagesMarkup = images.map(createImagesMarkup).join('');
-    gallery.innerHTML = imagesMarkup;
-  
-  // use library SimpleLightbox
-  const lightBox = new SimpleLightbox('.gallery a', {
-    captionsData: 'alt', captionPosition: 'bottom', captionDelay: 250
-  });
+        <a class="gallery-link" href="${original}">
+            <img class="gallery-image"
+                src="${preview}"
+                data-source="${original}"
+                alt="${description}"
+            />
+        </a>
+    </li>`;
+}
+
+const imagesMarkup = images.map(createImagesMarkup).join('');
+gallery.innerHTML = imagesMarkup;
+
+
+const lightBox = new SimpleLightbox('.gallery a', {
+    captionsData: 'alt',
+    captionPosition: 'bottom',
+    captionDelay: 250
+});
 
   
